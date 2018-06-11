@@ -38,19 +38,19 @@ body {
     font-size: 1em;
 }
 
-button {
+.add-message {
+    padding: 0 1em;
+}
+
+.add-message button {
     background: blue;
     padding: 1em 2em;
     color: #fff;
     font-size: 1em;
 }
 
-.add-message {
-    padding: 0 1em;
-}
-
-[type="text"],
-textarea {
+.add-message [type="text"],
+.add-message textarea {
     width: 100%;
     margin-bottom: 1em;
     padding: .5em;
