@@ -1,0 +1,5 @@
+type Message {
+    id: ID! @unique
+    author: String!
+    content: String!
+}

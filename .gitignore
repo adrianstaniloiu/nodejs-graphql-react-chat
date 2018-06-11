@@ -1,6 +1,10 @@
-.idea/
+/.idea/
 /server/node_modules/
 /server/generated/
+
+/client/node_modules/
+/client/build
+/client/coverage
 
 .DS_Store
 .env.local

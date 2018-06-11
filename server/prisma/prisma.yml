@@ -2,5 +2,5 @@ datamodel: datamodel.graphql
 
 hooks:
   post-deploy:
-    - graphql get-schema
+    graphql get-schema
 endpoint: http://localhost:4466
