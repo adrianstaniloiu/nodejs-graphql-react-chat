@@ -4,7 +4,6 @@ import {Query, Mutation, Subscription} from 'react-apollo';
 import Message from './Message'
 
 class App extends Component {
-
     render() {
         return (
             <div className="app">
@@ -79,22 +78,22 @@ class App extends Component {
                    `}>
                     {
                         addMessage => {
-                        return (
-                            <form action="/" className="add-message" onSubmit={e => {
-                                e.preventDefault();
+                            return (
+                                <form action="/" className="add-message" onSubmit={e => {
+                                    e.preventDefault();
 
-                                addMessage({
-                                    variables: {author: this.author.value, content: this.content.value}
-                                })
-                            }}>
-                                <input type="text" ref={(node) => this.author = node}/><br/>
-                                <textarea ref={(node) => this.content = node} cols="30"
-                                          rows="5"></textarea><br/>
-                                <button type="submit">Add Message</button>
-                            </form>
-                        );
+                                    addMessage({
+                                        variables: {author: this.author.value, content: this.content.value}
+                                    })
+                                }}>
+                                    <input type="text" ref={(node) => this.author = node}/><br/>
+                                    <textarea ref={(node) => this.content = node} cols="30"
+                                              rows="5"></textarea><br/>
+                                    <button type="submit">Add Message</button>
+                                </form>
+                            );
+                        }
                     }
-                }
                 </Mutation>
             </div>
         )

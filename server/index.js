@@ -5,7 +5,7 @@ const resolvers = {
     Query: {
         messages: (obj, args, context, info) => {
             return context.db.query.messages({}, info)
-        },
+        }
     },
     Mutation: {
         addMessage: (root, args, context, info) => {
@@ -19,12 +19,8 @@ const resolvers = {
                 info,
             )
         },
-        removeMessage: (root, args, context, info) => {
-            return context.db.mutation.deleteMessage({
-                where: {
-                    id: args.id
-                }
-            })
+        removeAllMessages: (root, args, context, info) => {
+            return context.db.mutation.deleteManyMessages({}, info)
         }
     },
     Subscription: {

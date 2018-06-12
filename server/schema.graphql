@@ -1,4 +1,4 @@
-#import Message, MessageSubscriptionPayload from "./generated/prisma.graphql"
+#import Message, MessageSubscriptionPayload, BatchPayload from "./generated/prisma.graphql"
 
 type Query {
     messages: [Message!]!
@@ -7,7 +7,8 @@ type Query {
 type Mutation {
     addMessage(author: String!, content: String!): Message!,
     modifyMessage(id: ID!, content: String): Message!
-    removeMessage(id: ID!): Message!
+    removeMessage(id: ID!): Message!,
+    removeAllMessages: BatchPayload!
 }
 
 type Subscription {
